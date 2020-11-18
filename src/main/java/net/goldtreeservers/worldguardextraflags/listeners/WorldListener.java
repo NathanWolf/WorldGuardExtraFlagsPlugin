@@ -34,8 +34,7 @@ public class WorldListener implements Listener
 		{
 			if (region.getFlag(Flags.CHUNK_UNLOAD) == State.DENY)
 			{
-				event.setCancelled(true);
-				break;
+				chunk.addPluginChunkTicket(WorldGuardExtraFlagsPlugin.getPlugin());
 			}
 		}
 	}

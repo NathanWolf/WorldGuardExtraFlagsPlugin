@@ -142,14 +142,7 @@ public class GiveEffectsFlagHandler extends Handler
 					
 					if (timeLeft > 0)
 					{
-						if (SupportedFeatures.isMobEffectColorsSupported())
-						{
-							player.addPotionEffect(new PotionEffect(effect.getKey(), timeLeft, removedEffect.getAmplifier(), removedEffect.isAmbient(), removedEffect.isParticles(), removedEffect.getColor()), true);
-						}
-						else
-						{
-							player.addPotionEffect(new PotionEffect(effect.getKey(), timeLeft, removedEffect.getAmplifier(), removedEffect.isAmbient(), removedEffect.isParticles()), true);
-						}
+						player.addPotionEffect(new PotionEffect(effect.getKey(), timeLeft, removedEffect.getAmplifier(), removedEffect.isAmbient(), removedEffect.isParticles()));
 					}
 				}
 				

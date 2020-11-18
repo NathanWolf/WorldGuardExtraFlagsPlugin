@@ -105,14 +105,7 @@ public class BlockedEffectsFlagHandler extends Handler
 					int timeLeft = removedEffect.getTimeLeftInTicks();
 					if (timeLeft > 0)
 					{
-						if (SupportedFeatures.isMobEffectColorsSupported())
-						{
-							player.addPotionEffect(new PotionEffect(potionEffect.getKey(), timeLeft, removedEffect.getAmplifier(), removedEffect.isAmbient(), removedEffect.isParticles(), removedEffect.getColor()), true);
-						}
-						else
-						{
-							player.addPotionEffect(new PotionEffect(potionEffect.getKey(), timeLeft, removedEffect.getAmplifier(), removedEffect.isAmbient(), removedEffect.isParticles()), true);
-						}
+						player.addPotionEffect(new PotionEffect(potionEffect.getKey(), timeLeft, removedEffect.getAmplifier(), removedEffect.isAmbient(), removedEffect.isParticles()));
 					}
 				}
 				
